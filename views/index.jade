@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.container-fluid
+    div.row(style="height: 100%;")
+      div.col-xs-6(style="height: 100%; text-align: center;")
+        img.bulb-icon.b-hide(src="/images/light-bulb.png")
+        img.bulb-icon-o(src="/images/light-bulb-o.png")
+        div.bulb-light
+        
+      div.col-xs-6(style="height: 100%;")
+        div.tg-list-wrapper(style="height: 100%;")
+          ul.tg-list(style="margin: 8em auto;")
+            li.tg-list-item
+              input#bulb-control.tgl.tgl-light(type = "checkbox")
+              label.tgl-btn(for = "bulb-control")
+  script(src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous")            
+  script(src="javascripts/bulb.js")  
