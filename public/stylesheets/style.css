@@ -51,7 +51,7 @@ body {
 	right: 0;
 	margin: auto;
 	transition: 0.6s all ease-in-out;
-	background: #fff0b6;
+	background: #FFFFB3;
 	background: -moz-radial-gradient(50% 50%, circle cover, #FFFFB3 0, #F9D74E 100%);/* FF3.6+ */
 	background: -webkit-radial-gradient(50% 50%, circle cover, #FFFFB3 0, #F9D74E 100%);/* Chrome10+,Safari5.1+ */
 	background: -o-radial-gradient(50% 50%, circle cover, #FFFFB3 0, #F9D74E 100%);/* Opera 11.10+ */
@@ -59,6 +59,12 @@ body {
 	background: radial-gradient(50% 50%, circle cover, #FFFFB3 0, #F9D74E 100%);/* W3C */
   z-index: -1;
 	visibility: hidden;
+}
+
+@media screen and (max-width: 700px) {
+	.bulb-light {
+    background: #FFFFB3;
+	}
 }
 
 .bulb-light.open {
