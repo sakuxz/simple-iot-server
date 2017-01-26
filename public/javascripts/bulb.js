@@ -1,3 +1,4 @@
+initBoard();
 $(function () {
   $('#bulb-control').change(function(event) {
     if (this.checked) {
@@ -24,6 +25,23 @@ function controlBulb(status, callback) {
   })
   .done(function(e) {
     callback();
+    console.log("success");
+  })
+  .fail(function() {
+    console.log("error");
+  })
+  .always(function() {
+    console.log("complete");
+  });
+
+}
+
+function initBoard() {
+  $.ajax({
+    url: '/api/board/init',
+    type: 'POST',
+  })
+  .done(function(e) {
     console.log("success");
   })
   .fail(function() {
