@@ -15,6 +15,7 @@
     "morgan": "~1.7.0",
     "node-sass-middleware": "0.9.8",
     "serve-favicon": "~2.3.0",
+    "webduino-blockly": "0.0.10",
     "webduino-js": "^0.4.10"
   },
   "devDependencies": {

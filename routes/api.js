@@ -1,15 +1,15 @@
 var express = require('express');
+require('webduino-js');
+require('webduino-blockly');
+
 var router = express.Router();
-var webduino = require('webduino-js');
 
 let ledState = {
   open: false,
 }
 
 var rgbled;
-
-board = new webduino.WebArduino('10XMWGQM');
-board.on('ready', function () {
+boardReady({board: 'Smart', device: '10XMWGQM', transport: 'mqtt'}, function (board) {
   board.systemReset();
   board.samplingInterval = 50;
   rgbled = getRGBLedCathode(board, 15, 12, 13);
